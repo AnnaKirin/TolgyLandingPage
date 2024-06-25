@@ -1,7 +1,10 @@
 /********** Template CSS **********/
 :root {
-    --primary: #4294E3;
-    --secondary: #8F12FD;
+    --primary: #3182ce ;
+    --secondary:#ce3182;
+    --gray300:#CBD5E0;
+    --gray400:#A0AEC0;
+    --gray500:#718096;
     --light: #F0F6FF;
     --dark: #262B47;
 }
@@ -68,6 +71,14 @@ h6,
 .btn {
     transition: .5s;
 }
+.border-blue{
+border: 2px solid var(--primary);
+}
+
+.btn-secondary{
+    background-color:var(--primary);
+}
+
 
 .btn.btn-primary-gradient,
 .btn.btn-secondary-gradient {
@@ -93,12 +104,12 @@ h6,
 
 .btn.btn-primary-gradient,
 .btn.btn-secondary-gradient::after {
-    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    background: linear-gradient(to bottom left, var(--primary), var(--secondary));
 }
 
 .btn.btn-secondary-gradient,
 .btn.btn-primary-gradient::after {
-    background: linear-gradient(to bottom right, var(--secondary), var(--primary));
+    background: linear-gradient(to bottom left, var(--secondary), var(--primary));
 }
 
 .btn.btn-primary-gradient:hover::after,
@@ -258,8 +269,8 @@ h6,
 
 /*** Hero Header ***/
 .hero-header {
-    margin-bottom: 6rem;
-    padding: 16rem 0 0 0;
+    margin-bottom: 1rem;
+    padding: 9rem 0 0 0;
     background:
         url(../img/bg-circle.png),
         url(../img/bg-triangle.png),
@@ -274,7 +285,7 @@ h6,
 
 @media (max-width: 991.98px) {
     .hero-header {
-        padding: 6rem 0 9rem 0;
+        padding: 4rem 0 6rem 0;
     }
 }
 
@@ -422,6 +433,23 @@ h6,
     background: linear-gradient(to bottom right, var(--secondary), var(--primary));
 }
 
+/***Form ***/
+@media (max-width: 600px) {
+  
+ .btn-primary, .btn-outline-primary {
+        width: 95vw; /* Full width on smaller screens */
+        
+    }
+    .input-group {
+        flex-direction: column; /* Stack input and button vertically */
+        justify-content: center;
+    }
+    .input-group .form-control, .input-group .btn {
+        width: 90vw; /* Full width for stacked elements */
+        margin-bottom: 10px; /* Space between stacked elements */
+        margin-right: 0;
+    }
+}
 
 /*** Footer ***/
 .footer {
